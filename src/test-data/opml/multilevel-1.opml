@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<opml version="1.1">
+  <head>
+    <title>title</title>
+  </head>
+  <body>
+    <outline title="guide1" icon="default">
+      <outline text="text1" title="title1" type="rss" version="RSS" xmlUrl="xmlUrl1" htmlUrl="htmlUrl1"/>
+    </outline>
+    <outline text="title2" type="rss" version="RSS" xmlUrl="xmlUrl2" htmlUrl=""/>
+  </body>
+</opml>

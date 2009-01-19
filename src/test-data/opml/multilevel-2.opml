@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<opml version="1.1">
+  <head>
+    <title>guide0</title>
+  </head>
+  <body>
+    <outline title="guide1">
+      <outline text="text1" title="title1" type="rss" version="RSS" xmlUrl="xmlUrl1" htmlUrl="htmlUrl1"/>
+    </outline>
+    <outline text="guide2">
+      <outline text="text2" title="title2" type="rss" version="RSS" xmlUrl="xmlUrl1"/>
+      <outline title="non-guide3">
+        <outline text="text3" title="title3" type="rss" version="RSS" xmlUrl="xmlUrl1" htmlUrl="htmlUrl1"/>
+      </outline>
+    </outline>
+    <outline text="text4" title="title4" type="rss" version="RSS" xmlUrl="xmlUrl2" htmlUrl="htmlUrl2"/>
+  </body>
+</opml>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<opml version="1.1">
+  <head>
+    <title>title</title>
+    <dateCreated>Tue, 24 Jan 2004 14:00:00 EET</dateCreated>
+  </head>
+  <body>
+    <outline text="text1" title="title1" type="rss" version="RSS" xmlUrl="xmlUrl1" htmlUrl="htmlUrl1"/>
+    <outline text="text2" title="title2" type="rss" version="RSS" xmlUrl="xmlUrl2" htmlUrl="htmlUrl2"/>
+    <outline title="QueryFeed" type="rss" xmlUrl="xmlURL" queryType="1" keywords="a b"/>
+    <outline title="QueryFeed2" type="rss" queryType="2" queryParam="a b" rating="2"/>
+  </body>
+</opml>
