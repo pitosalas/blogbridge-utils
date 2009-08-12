@@ -257,9 +257,9 @@ public class TestImporter extends TestCase
 
         guides = new OPMLGuide[]
         {
-            new OPMLGuide("0", null, false, null, null, false, 0, false, false),
-            new OPMLGuide("1", "icon", false, null, null, false, 1, false, false),
-            new OPMLGuide("2", "icon2", false, null, null, false, 2, false, false)
+            new OPMLGuide("0", null, false, null, null, false, 0, false, false, false),
+            new OPMLGuide("1", "icon", false, null, null, false, 1, false, false, false),
+            new OPMLGuide("2", "icon2", false, null, null, false, 2, false, false, false)
         };
 
         al = new ArrayList<DefaultOPMLFeed>();
@@ -300,8 +300,8 @@ public class TestImporter extends TestCase
 
         guides = new OPMLGuide[]
         {
-            new OPMLGuide("0", null, false, null, null, false, 0, false, false),
-            new OPMLGuide("1", "icon", false, null, null, false, 1, false, false),
+            new OPMLGuide("0", null, false, null, null, false, 0, false, false, false),
+            new OPMLGuide("1", "icon", false, null, null, false, 1, false, false, false),
         };
 
         al = new ArrayList<DefaultOPMLFeed>();
@@ -333,7 +333,7 @@ public class TestImporter extends TestCase
         assertEquals("No guides is converted to no guides.", 0, newSet.getGuides().length);
 
         // One guide
-        OPMLGuide guide = new OPMLGuide("b", "c", false, "d", "e", false, 0, false, false);
+        OPMLGuide guide = new OPMLGuide("b", "c", false, "d", "e", false, 0, false, false, false);
         set = new OPMLGuideSet("a", new OPMLGuide[] { guide }, now);
         newSet = Importer.convertToSingle(set);
 
@@ -1067,7 +1067,7 @@ public class TestImporter extends TestCase
      */
     public void testRLImportEmptyReadingList()
     {
-        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false);
+        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false, false);
 
         Element readingListOutline = new Element("outline");
         readingListOutline.setAttribute("type", "list");
@@ -1087,7 +1087,7 @@ public class TestImporter extends TestCase
      */
     public void testRLImportReadingList()
     {
-        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false);
+        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false, false);
 
         Element readingListOutline = new Element("outline");
         readingListOutline.setAttribute("type", "list");
@@ -1134,7 +1134,7 @@ public class TestImporter extends TestCase
      */
     public void testRLCollectObjects()
     {
-        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false);
+        OPMLGuide guide = new OPMLGuide("", "", false, null, null, false, 0, false, false, false);
         Element guideOutline = new Element("outline");
 
         Element readingListOutline = new Element("outline");

@@ -31,7 +31,7 @@ public class TestGeneralAcceptance extends TestCase
         feedsList.add(qf1);
         feedsList.add(sf1);
 
-        OPMLGuide guide = new OPMLGuide("A", "B", true, null, null, false, 1, false, false);
+        OPMLGuide guide = new OPMLGuide("A", "B", true, null, null, false, 1, false, false, false);
         guide.setFeeds(feedsList);
 
         // Export data

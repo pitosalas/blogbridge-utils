@@ -47,6 +47,7 @@ public class OPMLGuide implements FormatConstants
     private final boolean notificationsAllowed;
 
     private final boolean autoFeedsDiscovery;
+    private final boolean mobile;
 
     private List<DefaultOPMLFeed> feedsArray;
 
@@ -62,11 +63,13 @@ public class OPMLGuide implements FormatConstants
      * @param aPublishingRating     minimum rating for feed to be published.
      * @param aAutoFeedsDiscovery   automatic feeds discovery flag.
      * @param aNotificationsAllowed TRUE to allow notifications of events in this guide.
+     * @param aMobile               TRUE if this is a mobile guide.
      */
     public OPMLGuide(String aTitle, String anIcon, boolean aPublishingEnabled,
                      String aPublishingTitle, String aPublishingTags,
                      boolean aPublishingPublic, int aPublishingRating,
-                     boolean aAutoFeedsDiscovery, boolean aNotificationsAllowed)
+                     boolean aAutoFeedsDiscovery, boolean aNotificationsAllowed,
+                     boolean aMobile)
     {
         publishingEnabled = aPublishingEnabled;
         publishingTags = aPublishingTags;
@@ -79,6 +82,7 @@ public class OPMLGuide implements FormatConstants
         icon = anIcon;
 
         autoFeedsDiscovery = aAutoFeedsDiscovery;
+        mobile = aMobile;
 
         feedsArray = new ArrayList<DefaultOPMLFeed>(0);
         readingLists = new ArrayList<OPMLReadingList>(0);
@@ -201,6 +205,16 @@ public class OPMLGuide implements FormatConstants
     }
 
     /**
+     * Returns <code>TRUE</code> if this guide is mobile.
+     *
+     * @return <code>TRUE</code> if this guide is mobile.
+     */
+    public boolean isMobile()
+    {
+        return mobile;
+    }
+    
+    /**
      * Adds reading list.
      *
      * @param aList reading list.
@@ -240,6 +254,7 @@ public class OPMLGuide implements FormatConstants
             if (publishingPublic) outline.setAttribute(ATTR_GUIDE_PUB_PUBLIC, "true", bbns);
             if (notificationsAllowed) outline.setAttribute(ATTR_GUIDE_NOTIFICATIONS_ALLOWED, "true", bbns);
             if (autoFeedsDiscovery) outline.setAttribute(ATTR_GUIDE_AUTO_FEEDS_DISCOVERY, "true", bbns);
+            if (mobile) outline.setAttribute(ATTR_GUIDE_MOBILE, "true", bbns);
 
             outline.setAttribute(ATTR_GUIDE_PUB_RATING, Integer.toString(publishingRating), bbns);
         }

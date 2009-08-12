@@ -813,7 +813,7 @@ public class Importer implements FormatConstants
         String setTitle = getTitle(root);
         Date dateModified = getDateModified(root);
 
-        final OPMLGuide rootGuide = new OPMLGuide(setTitle, null, false, null, null, false, 0, false, true);
+        final OPMLGuide rootGuide = new OPMLGuide(setTitle, null, false, null, null, false, 0, false, true, false);
 
         // In ideal situation we will always have guide-outlines as first level of body.
         // On practice we will not. So if we encounter feed-outline put it into rootGuide.
@@ -959,7 +959,8 @@ public class Importer implements FormatConstants
             "true".equals(getAttributeValue(outline, ATTR_GUIDE_PUB_PUBLIC, bbns)),
             getIntAttributeValue(outline, ATTR_GUIDE_PUB_RATING, bbns, 0),
             "true".equals(getAttributeValue(outline, ATTR_GUIDE_AUTO_FEEDS_DISCOVERY, bbns)),
-            "true".equals(getAttributeValue(outline, ATTR_GUIDE_NOTIFICATIONS_ALLOWED, bbns)));
+            "true".equals(getAttributeValue(outline, ATTR_GUIDE_NOTIFICATIONS_ALLOWED, bbns)),
+            "true".equals(getAttributeValue(outline, ATTR_GUIDE_MOBILE, bbns)));
 
         guide.setFeeds(new ArrayList<DefaultOPMLFeed>());
         collectObjects(outline, guide);
@@ -1060,9 +1061,16 @@ public class Importer implements FormatConstants
             OPMLReadingList list = new OPMLReadingList(title, url.trim());
 
             // Collect feeds and place them into the list
-            OPMLGuide temp = new OPMLGuide("", "", false, null, null, false, 0, false, false);
+            OPMLGuide temp = new OPMLGuide("", "", false, null, null, false, 0, false, false, false);
             collectObjects(outline, temp);
-            list.setFeeds(temp.getFeeds());
+
+            List<DefaultOPMLFeed> feeds = temp.getFeeds();
+            List<DirectOPMLFeed> dfeeds = new ArrayList<DirectOPMLFeed>(feeds.size());
+            for (DefaultOPMLFeed feed : feeds)
+            {
+                if (feed instanceof DirectOPMLFeed) dfeeds.add((DirectOPMLFeed)feed);
+            }
+            list.setFeeds(dfeeds);
 
             guide.add(list);
         }

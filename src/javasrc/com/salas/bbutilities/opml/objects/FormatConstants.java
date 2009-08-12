@@ -88,6 +88,7 @@ public interface FormatConstants
     String ATTR_GUIDE_PUB_RATING        = "pubRating";
     String ATTR_GUIDE_AUTO_FEEDS_DISCOVERY = "autoFeedsDiscovery";
     String ATTR_GUIDE_NOTIFICATIONS_ALLOWED = "notificationsAllowed";
+    String ATTR_GUIDE_MOBILE            = "mobile";
 
     // Tags
     String ATTR_TAGS                    = "tags";

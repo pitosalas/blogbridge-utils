@@ -89,7 +89,7 @@ public class TestExporterOld extends TestCase
     public void testGenerated()
     {
         Exporter.setGenerator(" Test  ");
-        Document doc = exp.export(new OPMLGuide("a", "b", false, null, null, false, 0, false, false));
+        Document doc = exp.export(new OPMLGuide("a", "b", false, null, null, false, 0, false, false, false));
         String str = Transformation.documentToString(doc);
         String date = new SimpleDateFormat(Exporter.DATE_FORMAT).format(new Date());
         Pattern pat = Pattern.compile("^<\\?[^>]+>[^<]+<!-- Test on " + date + " -->");
@@ -104,8 +104,8 @@ public class TestExporterOld extends TestCase
         Date now = new Date();
         OPMLGuide[] guides = new OPMLGuide[]
             {
-                new OPMLGuide("a", "b", true, "a", "b", false, 0, true, true),
-                new OPMLGuide("c", "d", false, null, null, false, 1, false, false)
+                new OPMLGuide("a", "b", true, "a", "b", false, 0, true, true, true),
+                new OPMLGuide("c", "d", false, null, null, false, 1, false, false, false)
             };
         OPMLGuideSet set = new OPMLGuideSet("e", guides, now);
 
