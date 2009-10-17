@@ -47,12 +47,14 @@ public abstract class DataOPMLFeed extends DefaultOPMLFeed
      * @param aViewModeEnabled    <code>TRUE</code> if custom view mode is enabled.
      * @param aViewMode           custom view mode.
      * @param aAscendingSorting   ascending sorting override flag.
+     * @param aHandlingType       handling type.
      */
     public DataOPMLFeed(String aTitle, int aLimit, int aRating, String aReadArticlesKeys, String aPinnedArticlesKeys,
-                        int aViewType, boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting)
+                        int aViewType, boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting,
+                        int aHandlingType)
     {
         super(aTitle, aLimit, aRating, aReadArticlesKeys, aPinnedArticlesKeys, aViewType, aViewModeEnabled, aViewMode,
-                aAscendingSorting);
+                aAscendingSorting, aHandlingType);
     }
 
     /**

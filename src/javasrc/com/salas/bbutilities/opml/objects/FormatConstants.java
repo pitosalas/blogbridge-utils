@@ -54,6 +54,7 @@ public interface FormatConstants
     String ATTR_FEED_VIEW_TYPE          = "viewtype";
     String ATTR_FEED_VIEW_MODE_ENABLED  = "viewModeEnabled";
     String ATTR_FEED_VIEW_MODE          = "viewMode";
+    String ATTR_FEED_HANDLING_TYPE      = "handlingType";
     String ATTR_FEED_DEDUP_ENABLED      = "dedupEnabled";
     String ATTR_FEED_DEDUP_FROM         = "dedupFrom";
     String ATTR_FEED_DEDUP_TO           = "dedupTo";

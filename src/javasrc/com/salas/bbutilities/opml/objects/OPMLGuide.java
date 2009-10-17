@@ -203,7 +203,7 @@ public class OPMLGuide implements FormatConstants
     {
         return notificationsAllowed;
     }
-
+    
     /**
      * Returns <code>TRUE</code> if this guide is mobile.
      *

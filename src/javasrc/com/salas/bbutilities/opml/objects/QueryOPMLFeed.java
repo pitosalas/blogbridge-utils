@@ -55,13 +55,15 @@ public class QueryOPMLFeed extends DataOPMLFeed
      * @param aViewModeEnabled  custom view mode state.
      * @param aViewMode         custom view mode.
      * @param aAscendingSorting ascending sorting override flag.
+     * @param aHandlingType     handling type.
      */
     public QueryOPMLFeed(String aTitle, int aQueryType, String aQueryParam, String aXmlURL,
         String aReadArticlesKeys, String aPinnedArticlesKeys, int aLimit, int aRating,
-        int aViewType, boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting)
+        int aViewType, boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting,
+        int aHandlingType)
     {
         super(aTitle, aLimit, aRating, aReadArticlesKeys, aPinnedArticlesKeys,
-            aViewType, aViewModeEnabled, aViewMode, aAscendingSorting);
+            aViewType, aViewModeEnabled, aViewMode, aAscendingSorting, aHandlingType);
 
         queryType = aQueryType;
         queryParam = aQueryParam;

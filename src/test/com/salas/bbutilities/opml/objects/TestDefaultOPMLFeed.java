@@ -38,7 +38,7 @@ public class TestDefaultOPMLFeed extends TestCase
     public void testStoringEmptyTitles()
     {
         Element outline = new Element("ouline");
-        DefaultOPMLFeed feed = new DefaultOPMLFeed(null, 1, 1, null, null, -1, false, -1, null) {};
+        DefaultOPMLFeed feed = new DefaultOPMLFeed(null, 1, 1, null, null, -1, false, -1, null, 0) {};
         feed.write(outline, null, false);
 
         assertEquals("", outline.getAttributeValue("text"));

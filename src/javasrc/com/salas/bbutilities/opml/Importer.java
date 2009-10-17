@@ -370,6 +370,7 @@ public class Importer implements FormatConstants
         int viewType = getIntAttributeValue(outline, ATTR_FEED_VIEW_TYPE, bbns, -1);
         boolean viewModeEnabled = getBooleanAttributeValue(outline, ATTR_FEED_VIEW_MODE_ENABLED, bbns, false);
         int viewMode = getIntAttributeValue(outline, ATTR_FEED_VIEW_MODE, bbns, -1);
+        int handlingType = getIntAttributeValue(outline, ATTR_FEED_HANDLING_TYPE, bbns, 0);
 
         boolean dedupEnabled = getBooleanAttributeValue(outline, ATTR_FEED_DEDUP_ENABLED, bbns, false);
         int dedupFrom = getIntAttributeValue(outline, ATTR_FEED_DEDUP_FROM, bbns, -1);
@@ -379,7 +380,7 @@ public class Importer implements FormatConstants
 
         // Create a feed
         QueryOPMLFeed feed = new QueryOPMLFeed(title, queryType, parameter, xmlURL, readArticles,
-            pinnedArticles, purgeLimit, rating, viewType, viewModeEnabled, viewMode, ascendingSorting);
+            pinnedArticles, purgeLimit, rating, viewType, viewModeEnabled, viewMode, ascendingSorting, handlingType);
         feed.setDedupEnabled(dedupEnabled);
         feed.setDedupFrom(dedupFrom);
         feed.setDedupTo(dedupTo);
@@ -421,6 +422,8 @@ public class Importer implements FormatConstants
         boolean viewModeEnabled = getBooleanAttributeValue(outline, ATTR_FEED_VIEW_MODE_ENABLED, bbns, false);
         int viewMode = getIntAttributeValue(outline, ATTR_FEED_VIEW_MODE, bbns, -1);
 
+        int handlingType = getIntAttributeValue(outline, ATTR_FEED_HANDLING_TYPE, bbns, 0);
+
         boolean dedupEnabled = getBooleanAttributeValue(outline, ATTR_FEED_DEDUP_ENABLED, bbns, false);
         int dedupFrom = getIntAttributeValue(outline, ATTR_FEED_DEDUP_FROM, bbns, -1);
         int dedupTo = getIntAttributeValue(outline, ATTR_FEED_DEDUP_TO, bbns, -1);
@@ -428,7 +431,7 @@ public class Importer implements FormatConstants
         Boolean ascendingSorting = getAscendingSortingAttributeValue(outline, bbns);
 
         SearchOPMLFeed feed = new SearchOPMLFeed(title, query, purgeLimit, rating, viewType, viewModeEnabled, viewMode,
-            ascendingSorting);
+            ascendingSorting, handlingType);
         feed.setDedupEnabled(dedupEnabled);
         feed.setDedupFrom(dedupFrom);
         feed.setDedupTo(dedupTo);
@@ -484,11 +487,13 @@ public class Importer implements FormatConstants
         boolean viewModeEnabled = getBooleanAttributeValue(outline, ATTR_FEED_VIEW_MODE_ENABLED, bbns, false);
         int viewMode = getIntAttributeValue(outline, ATTR_FEED_VIEW_MODE, bbns, -1);
 
+        int handlingType = getIntAttributeValue(outline, ATTR_FEED_HANDLING_TYPE, bbns, 0);
+
         Boolean ascendingSorting = getAscendingSortingAttributeValue(outline, bbns);
 
         DirectOPMLFeed feed = new DirectOPMLFeed(title, xmlUrl, htmlUrl, rating, readArticles, pinnedArticles,
                 purgeLimit, customTitle, customCreator, customDescription, tags, tagsDescription, tagsExtended, disabled,
-                viewType, viewModeEnabled, viewMode, ascendingSorting);
+                viewType, viewModeEnabled, viewMode, ascendingSorting, handlingType);
 
         fillUpdatePeriod(feed, outline, bbns);
 

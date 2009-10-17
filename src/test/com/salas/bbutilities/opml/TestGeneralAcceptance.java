@@ -20,9 +20,9 @@ public class TestGeneralAcceptance extends TestCase
         throws ImporterException
     {
         // Create guide for export
-        DirectOPMLFeed df1 = new DirectOPMLFeed("A", "B", "C", 1, "D", "L", 2, "E", "F", "G", "I", "J", "K", false, 1, false, 1, null);
-        QueryOPMLFeed  qf1 = new QueryOPMLFeed("H", 1, "I", "J", "K", "L", 2, 3, 1, true, 2, true);
-        SearchOPMLFeed sf1 = new SearchOPMLFeed("M", "N", 1, 2, 3, true, 1, false);
+        DirectOPMLFeed df1 = new DirectOPMLFeed("A", "B", "C", 1, "D", "L", 2, "E", "F", "G", "I", "J", "K", false, 1, false, 1, null, 0);
+        QueryOPMLFeed  qf1 = new QueryOPMLFeed("H", 1, "I", "J", "K", "L", 2, 3, 1, true, 2, true, 0);
+        SearchOPMLFeed sf1 = new SearchOPMLFeed("M", "N", 1, 2, 3, true, 1, false, 0);
 
         qf1.setUpdatePeriod(1l);
 

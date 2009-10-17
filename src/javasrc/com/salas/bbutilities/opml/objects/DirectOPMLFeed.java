@@ -66,17 +66,18 @@ public class DirectOPMLFeed extends DataOPMLFeed
      * @param aViewModeEnabled   custom view mode state.
      * @param aViewMode          custom view mode.
      * @param aAscendingSorting  ascending sorting override flag.
+     * @param aHandlingType      handling type.
      */
     public DirectOPMLFeed(String aTitle, String aXmlURL, String aHtmlURL, int aRating,
                           String aReadArticlesKeys, String aPinnedArticlesKeys, int aLimit,
                           String aCustomTitle, String aCustomCreator, String aCustomDescription,
                           String aTags, String aTagsDescription, String aTagsExtended,
                           boolean aDisabled, int aViewType, boolean aViewModeEnabled, int aViewMode,
-                          Boolean aAscendingSorting
+                          Boolean aAscendingSorting, int aHandlingType
     )
     {
         super(aTitle, aLimit, aRating, aReadArticlesKeys, aPinnedArticlesKeys, aViewType, aViewModeEnabled, aViewMode,
-            aAscendingSorting);
+            aAscendingSorting, aHandlingType);
 
         xmlURL = aXmlURL;
         htmlURL = aHtmlURL;

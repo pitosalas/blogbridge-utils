@@ -41,33 +41,36 @@ public abstract class DefaultOPMLFeed implements FormatConstants
     private final boolean viewModeEnabled;
     private final int     viewMode;
     private final Boolean ascendingSorting;
+    private final int     handlingType;
 
     /**
      * Creates default feed.
      *
-     * @param aTitle    feed title.
-     * @param aLimit    articles limit.
-     * @param aRating   rating.
-     * @param aReadArticlesKeys read articles' keys.
+     * @param aTitle              feed title.
+     * @param aLimit              articles limit.
+     * @param aRating             rating.
+     * @param aReadArticlesKeys   read articles' keys.
      * @param aPinnedArticlesKeys keys of pinned articles.
-     * @param aViewType view type.
-     * @param aViewModeEnabled <code>TRUE</code> if custom view mode is enabled.
-     * @param aViewMode custom view mode.
-     * @param aAscendingSorting ascending sorting override flag.
+     * @param aViewType           view type.
+     * @param aViewModeEnabled    <code>TRUE</code> if custom view mode is enabled.
+     * @param aViewMode           custom view mode.
+     * @param aAscendingSorting   ascending sorting override flag.
+     * @param aHandlingType       handling type.
      */
     public DefaultOPMLFeed(String aTitle, int aLimit, int aRating, String aReadArticlesKeys,
                            String aPinnedArticlesKeys, int aViewType, boolean aViewModeEnabled,
-                           int aViewMode, Boolean aAscendingSorting)
+                           int aViewMode, Boolean aAscendingSorting, int aHandlingType)
     {
-        title = aTitle;
-        limit = aLimit;
-        rating = aRating;
-        readArticlesKeys = aReadArticlesKeys;
-        pinnedArticlesKeys = aPinnedArticlesKeys;
-        viewType = aViewType;
-        viewModeEnabled = aViewModeEnabled;
-        viewMode = aViewMode;
-        ascendingSorting = aAscendingSorting;
+        title               = aTitle;
+        limit               = aLimit;
+        rating              = aRating;
+        readArticlesKeys    = aReadArticlesKeys;
+        pinnedArticlesKeys  = aPinnedArticlesKeys;
+        viewType            = aViewType;
+        viewModeEnabled     = aViewModeEnabled;
+        viewMode            = aViewMode;
+        ascendingSorting    = aAscendingSorting;
+        handlingType        = aHandlingType;
     }
 
     /**
@@ -161,6 +164,16 @@ public abstract class DefaultOPMLFeed implements FormatConstants
     }
 
     /**
+     * Returns the handling type.
+     *
+     * @return the handling type.
+     */
+    public int getHandlingType()
+    {
+        return handlingType;
+    }
+    
+    /**
      * Writes data to outline.
      *
      * @param outline           outline.
@@ -203,6 +216,8 @@ public abstract class DefaultOPMLFeed implements FormatConstants
             {
                 outline.setAttribute(ATTR_FEED_ASCENDING_SORTING, ascendingSorting ? "true" : "false", bbns);
             }
+            
+            writeIfSet(outline, ATTR_FEED_HANDLING_TYPE, bbns, handlingType, -1);
         }
     }
 

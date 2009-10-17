@@ -41,19 +41,22 @@ public class SearchOPMLFeed extends DefaultOPMLFeed
     /**
      * Creates holder.
      *
-     * @param aTitle    title of feed.
-     * @param aQuery    query string.
-     * @param aLimit    articles (purge) limit.
-     * @param aRating   rating of the feed.
-     * @param aViewType view type.
-     * @param aViewModeEnabled   custom view mode state.
-     * @param aViewMode          custom view mode.
-     * @param aAscendingSorting  ascending sorting override flag.
+     * @param aTitle              title of feed.
+     * @param aQuery              query string.
+     * @param aLimit              articles (purge) limit.
+     * @param aRating             rating of the feed.
+     * @param aViewType           view type.
+     * @param aViewModeEnabled    custom view mode state.
+     * @param aViewMode           custom view mode.
+     * @param aAscendingSorting   ascending sorting override flag.
+     * @param aHandlingType       handling type.
      */
     public SearchOPMLFeed(String aTitle, String aQuery, int aLimit, int aRating, int aViewType,
-                          boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting)
+                          boolean aViewModeEnabled, int aViewMode, Boolean aAscendingSorting,
+                          int aHandlingType)
     {
-        super(aTitle, aLimit, aRating, null, null, aViewType, aViewModeEnabled, aViewMode, aAscendingSorting);
+        super(aTitle, aLimit, aRating, null, null, aViewType, aViewModeEnabled, aViewMode, aAscendingSorting,
+              aHandlingType);
 
         query = aQuery;
     }

@@ -263,18 +263,18 @@ public class TestImporter extends TestCase
         };
 
         al = new ArrayList<DefaultOPMLFeed>();
-        al.add(new DirectOPMLFeed("0_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
-        al.add(new DirectOPMLFeed("0_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
+        al.add(new DirectOPMLFeed("0_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
+        al.add(new DirectOPMLFeed("0_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
         guides[0].setFeeds(al);
 
         al = new ArrayList<DefaultOPMLFeed>();
-        al.add(new DirectOPMLFeed("1_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
-        al.add(new DirectOPMLFeed("1_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
+        al.add(new DirectOPMLFeed("1_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
+        al.add(new DirectOPMLFeed("1_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
         guides[1].setFeeds(al);
 
         al = new ArrayList<DefaultOPMLFeed>();
-        al.add(new DirectOPMLFeed("2_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
-        al.add(new DirectOPMLFeed("2_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
+        al.add(new DirectOPMLFeed("2_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
+        al.add(new DirectOPMLFeed("2_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
         guides[2].setFeeds(al);
 
         final OPMLGuide guide = Importer.convertToSingle(guides);
@@ -305,8 +305,8 @@ public class TestImporter extends TestCase
         };
 
         al = new ArrayList<DefaultOPMLFeed>();
-        al.add(new DirectOPMLFeed("1_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
-        al.add(new DirectOPMLFeed("1_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null));
+        al.add(new DirectOPMLFeed("1_0", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
+        al.add(new DirectOPMLFeed("1_1", "xml", "html", 0, null, null, -1, null, null, null, null, null, null, false, 1, false, 1, null, 0));
         guides[1].setFeeds(al);
 
         final OPMLGuide guide = Importer.convertToSingle(guides);
@@ -633,7 +633,7 @@ public class TestImporter extends TestCase
         outline.setAttribute("ascendingsorting", "true");
 
         SearchOPMLFeed searchFeed = Importer.createSearchFeed(outline, null);
-        SearchOPMLFeed match = new SearchOPMLFeed("test", "a", 1, 2, 1, true, 2, true);
+        SearchOPMLFeed match = new SearchOPMLFeed("test", "a", 1, 2, 1, true, 2, true, 0);
         assertEquals(match, searchFeed);
     }
 
@@ -660,7 +660,7 @@ public class TestImporter extends TestCase
         outline.setAttribute("ascendingsorting", "false", FormatConstants.BB_NAMESPACE);
 
         SearchOPMLFeed searchFeed = Importer.createSearchFeed(outline,FormatConstants.BB_NAMESPACE);
-        SearchOPMLFeed match = new SearchOPMLFeed("test", "a", 1, 2, 1, true, 2, false);
+        SearchOPMLFeed match = new SearchOPMLFeed("test", "a", 1, 2, 1, true, 2, false, 0);
         match.setDedupEnabled(true);
         match.setDedupFrom(5);
         match.setDedupTo(6);
@@ -691,7 +691,7 @@ public class TestImporter extends TestCase
         outline.setAttribute("updateperiod", "1", FormatConstants.BB_NAMESPACE);
 
         QueryOPMLFeed queryFeed = Importer.createQueryFeed(outline, FormatConstants.BB_NAMESPACE);
-        QueryOPMLFeed match = new QueryOPMLFeed("test", 2, "a b c", null, null, null, 1, 2, 1, true, 2, null);
+        QueryOPMLFeed match = new QueryOPMLFeed("test", 2, "a b c", null, null, null, 1, 2, 1, true, 2, null, 0);
         match.setDedupEnabled(true);
         match.setDedupFrom(5);
         match.setDedupTo(6);
