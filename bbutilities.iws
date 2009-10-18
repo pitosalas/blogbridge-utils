@@ -4,15 +4,16 @@
     <list default="true" readonly="true" id="ecf78294-d552-49a4-858c-ae7400766c9f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DefaultOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DefaultOPMLFeed.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/OPMLGuide.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/OPMLGuide.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DataOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DataOPMLFeed.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/objects/TestDefaultOPMLFeed.java" afterPath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/objects/TestDefaultOPMLFeed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/SearchOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/SearchOPMLFeed.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/QueryOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/QueryOPMLFeed.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestImporter.java" afterPath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestImporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbutilities.iws" afterPath="$PROJECT_DIR$/bbutilities.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestGeneralAcceptance.java" afterPath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestGeneralAcceptance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DataOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DataOPMLFeed.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/SearchOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/SearchOPMLFeed.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/FormatConstants.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/FormatConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/Importer.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/Importer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestImporter.java" afterPath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestImporter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DirectOPMLFeed.java" afterPath="$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/objects/DirectOPMLFeed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestGeneralAcceptance.java" afterPath="$PROJECT_DIR$/src/test/com/salas/bbutilities/opml/TestGeneralAcceptance.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="bbutilities.iws" />
@@ -106,7 +107,7 @@
       <file leaf-file-name="Transformation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/utils/Transformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="46" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.7118644">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -411,12 +412,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1395" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494432" sideWeight="0.6609272" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494432" sideWeight="0.6609272" order="0" side_tool="false" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="-1" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
@@ -529,7 +530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javasrc/com/salas/bbutilities/opml/utils/Transformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="46" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.7118644">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
